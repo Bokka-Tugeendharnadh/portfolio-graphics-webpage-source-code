@@ -10,5 +10,5 @@ A modern, high-end graphics portfolio webpage template with:
 
 No build tools are required.
 
-1. Open `/home/runner/work/portfolio-graphics-webpage-source-code/portfolio-graphics-webpage-source-code/index.html` in any browser.
+1. Open `index.html` in any browser.
 2. Or from this repository root, run a static server if preferred.
