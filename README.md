@@ -12,3 +12,5 @@ No build tools are required.
 
 1. Open `index.html` in any browser.
 2. Or from this repository root, run a static server if preferred.
+
+> Note: Update the sample content (name, projects, and email) with your own details before publishing.
