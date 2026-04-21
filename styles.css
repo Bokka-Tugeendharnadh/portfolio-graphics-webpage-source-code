@@ -1,0 +1,126 @@
+:root {
+  --bg: #090811;
+  --text: #f5f4ff;
+  --muted: #cbc7ea;
+  --accent: #73a3ff;
+  --accent-2: #9b66ff;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #24173f 0%, transparent 50%),
+    radial-gradient(circle at 80% 0%, #0f3f66 0%, transparent 40%), var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.background-layer {
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  background: conic-gradient(from 180deg at 50% 50%, #402f9e, #2a74c9, #7f3fc8, #402f9e);
+  filter: blur(140px) saturate(120%);
+  opacity: 0.4;
+  animation: drift 14s ease-in-out infinite alternate;
+}
+
+.container {
+  width: min(1040px, 92vw);
+  margin: 3rem auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  background: linear-gradient(150deg, var(--glass), rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  padding: 1.8rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.hero h1 {
+  margin: 0.2rem 0 0.8rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  border: none;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.projects-grid article {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.projects-grid p,
+.contact p {
+  color: var(--muted);
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(-3%, -1%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate(4%, 2%) rotate(10deg) scale(1.1);
+  }
+}
