@@ -1,2 +1,16 @@
 # portfolio-graphics-webpage-source-code
-The highly designed with graphics and all personal details portfolio webpage source-code 
+
+A modern, high-end graphics portfolio webpage template with:
+- vibrant gradient background effects
+- glassmorphism cards
+- smooth animated visual layer
+- responsive layout for desktop and mobile
+
+## Run locally
+
+No build tools are required.
+
+1. Open `index.html` in any browser.
+2. Or from this repository root, run a static server if preferred.
+
+> Note: Update the sample content (name, projects, and email) with your own details before publishing.
